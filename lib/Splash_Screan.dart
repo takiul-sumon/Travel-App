@@ -43,7 +43,7 @@ class Splash_Screan extends StatelessWidget {
                           color: Colors.white,
                           fontFamily: 'Montserrat-SemiBold',
                           fontWeight: FontWeight.bold)),
-                Padding(
+              const  Padding(
                   padding: EdgeInsets.fromLTRB(0, 0, 10, 10),
                   child: const  Text(
                       'Luxarious\nVacation',
@@ -80,15 +80,6 @@ class Splash_Screan extends StatelessWidget {
               ),
             )
 
-            // ),
-            // Positioned(child: Text(
-            //     'Aspen',
-            //     style: TextStyle(
-            //         fontSize: 116, color: Colors.white, fontFamily: 'Hiatus'),
-            //   ),
-            //   left: 260,top: 126,)
-
-            // Padding(padding: EdgeInsets.fromLTRB(263, 126, 0, 0)),
           ],
         ),
       ),

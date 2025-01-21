@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/dashboard.dart';
 
 class Splash_Screan extends StatelessWidget {
   const Splash_Screan({super.key});
@@ -57,7 +58,9 @@ class Splash_Screan extends StatelessWidget {
                   SizedBox(
                     height: 52,width: MediaQuery.of(context).size.width*.9,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ChooseHotel()));
+                      },
                       child: Text(
                         'Explore',
                         style: TextStyle(

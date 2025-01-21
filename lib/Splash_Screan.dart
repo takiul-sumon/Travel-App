@@ -5,7 +5,7 @@ class Splash_Screan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -13,14 +13,14 @@ class Splash_Screan extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: const Column(
+        child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+           const SizedBox(
               height: 20,
             ),
-            Align(
+          const  Align(
               // widthFactor: .5,
               alignment: Alignment.center,
               child: Text(
@@ -30,22 +30,51 @@ class Splash_Screan extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 300,
+              height: MediaQuery.of(context).size.height * .52,
             ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 30,
-                ),
-                Text(
-                  'Luxarious\nVacation',
-                  style: TextStyle(
-                      fontSize: 40,
-                      color: Colors.white,
-                      fontFamily: 'Montserrat-SemiBold',
-                      fontWeight: FontWeight.bold),
-                )
-              ],
+            Padding(
+              padding:const EdgeInsets.fromLTRB(20, 0, 0, 0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                const  Text('Plan your',
+                      style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.white,
+                          fontFamily: 'Montserrat-SemiBold',
+                          fontWeight: FontWeight.bold)),
+                const  Text(
+                    'Luxarious\nVacation',
+                    style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.white,
+                        fontFamily: 'Montserrat-Regular',
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 52,width: MediaQuery.of(context).size.width*.9,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Explore',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom( 
+                        backgroundColor:
+                            Color(Color.fromRGBO(23, 111, 242, 1).value),
+                        // onPrimary: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        // padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             )
 
             // ),

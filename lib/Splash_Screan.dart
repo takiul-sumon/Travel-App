@@ -43,14 +43,17 @@ class Splash_Screan extends StatelessWidget {
                           color: Colors.white,
                           fontFamily: 'Montserrat-SemiBold',
                           fontWeight: FontWeight.bold)),
-                const  Text(
-                    'Luxarious\nVacation',
-                    style: TextStyle(
-                        fontSize: 40,
-                        color: Colors.white,
-                        fontFamily: 'Montserrat-Regular',
-                        fontWeight: FontWeight.bold),
-                  ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(0, 0, 10, 10),
+                  child: const  Text(
+                      'Luxarious\nVacation',
+                      style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white,
+                          fontFamily: 'Montserrat-Regular',
+                          fontWeight: FontWeight.bold),
+                    ),
+                ),
                   SizedBox(
                     height: 52,width: MediaQuery.of(context).size.width*.9,
                     child: ElevatedButton(

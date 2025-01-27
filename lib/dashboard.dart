@@ -10,13 +10,7 @@ class ChooseHotel extends StatefulWidget {
 class _ChooseHotelState extends State<ChooseHotel> {
   @override
   Widget build(BuildContext context) {
-    List<String> hotelChoice = [
-      'Locations',
-      'Hotels',
-      'Food',
-      'Adventure',
-      'Actions'
-    ];
+    
 
     final List<String> tabs = [
       'Location',
@@ -102,44 +96,67 @@ class _ChooseHotelState extends State<ChooseHotel> {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: tabs.map(
-                    (e) {
-                      final bool isSelected = selectedTab == e;
-                      return GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                            // margin: const EdgeInsets.symmetric(horizontal: 8),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 16, vertical: 8),
-                            decoration: BoxDecoration(
-                              color: isSelected
-                                  ? Colors.blue.withOpacity(0.1)
-                                  : Colors.transparent, // Background for selected
-                              borderRadius:
-                                  BorderRadius.circular(20), // Rounded corners
-                            ),
-                            child: Text(
-                              e,
-                              style: TextStyle(
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 32, 0, 0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: tabs.map(
+                      (e) {
+                        final bool isSelected = selectedTab == e;
+                        return GestureDetector(
+                          onTap: () {},
+                          child: Container(
+                              // margin: const EdgeInsets.symmetric(horizontal: 8),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 8),
+                              decoration: BoxDecoration(
                                 color: isSelected
-                                    ? Colors.blue
+                                    ? Colors.blue.withOpacity(0.1)
                                     : Colors
-                                        .grey, // Text color based on selection
-                                fontWeight: isSelected
-                                    ? FontWeight.bold
-                                    : FontWeight.normal, // Bold for selected
-                                fontSize: 16,
+                                        .transparent, // Background for selected
+                                borderRadius: BorderRadius.circular(
+                                    20), // Rounded corners
                               ),
-                            )),
-                      );
-                    },
-                  ).toList()),
+                              child: Text(
+                                e,
+                                style: TextStyle(
+                                  color: isSelected
+                                      ? Colors.blue
+                                      : Colors
+                                          .grey, // Text color based on selection
+                                  fontWeight: isSelected
+                                      ? FontWeight.bold
+                                      : FontWeight.normal, // Bold for selected
+                                  fontSize: 16,
+                                ),
+                              )),
+                        );
+                      },
+                    ).toList()),
+              ),
+            ),
+          const  SizedBox(
+              height: 32,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+              const  Text(
+                  'Popular',
+                  style: TextStyle(fontSize: 18, fontFamily: 'Montserrat',),
+                ),
+              const  SizedBox(
+                  width: 225,
+                ),
+                TextButton(
+                    onPressed: () {},style:const ButtonStyle(),
+                    child:const Text(
+                      'See All',
+                      style: TextStyle(fontSize: 12, fontFamily: 'circularxx',color: Color(0xff176FF2)),
+                    ))
+              ],
             )
           ],
         ),

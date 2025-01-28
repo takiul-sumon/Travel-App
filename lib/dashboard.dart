@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/Hotel_List.dart';
 import 'package:travel_app/bottom.dart';
+import 'package:travel_app/travel_list.dart';
 
 class ChooseHotel extends StatefulWidget {
   const ChooseHotel({super.key});
@@ -20,21 +21,40 @@ class _ChooseHotelState extends State<ChooseHotel> {
       'Activities'
     ];
     String selectedTab = 'Location';
-     final List<Map<String, dynamic>> hotels = [
+    final List<Map<String, dynamic>> hotels = [
+      {
+        'name': 'Alley Palace',
+        'rating': '4.1 ',
+        'image': 'assets/photos/Group1.png'
+      },
+      {
+        'name': 'Ocean View',
+        'rating': '4.5 ',
+        'image': 'assets/photos/image2.jpg'
+      },
+      {
+        'name': 'Mountain Escape',
+        'rating': '4.8 ',
+        'image': 'assets/photos/image1.jpg'
+      },
+    ];
+
+
+    final List<Map<String, String>> travelDeals = const [
     {
-      'name': 'Alley Palace',
-      'rating': '4.1 ',
-      'image': 'assets/photos/Group1.png'
+      'image': 'assets/photos/image1.jpg',
+      'title': 'Explore Aspen',
+      'deal': 'Hot Deal',
     },
     {
-      'name': 'Ocean View',
-      'rating': '4.5 ',
-      'image': 'assets/photos/image2.jpg'
+      'image': 'assets/photos/image2.jpg',
+      'title': 'Swiss Adventure',
+      'deal': 'Limited Offer',
     },
     {
-      'name': 'Mountain Escape',
-      'rating': '4.8 ',
-      'image': 'assets/photos/image1.jpg'
+      'image': 'assets/photos/image3.jpg',
+      'title': 'Paris Getaway',
+      'deal': 'Exclusive',
     },
   ];
 
@@ -119,10 +139,26 @@ class _ChooseHotelState extends State<ChooseHotel> {
             ],
           ),
           Container(
-            height: 240,
-            width: double.infinity,
-            child: ChooseHote(hotels:hotels))
-          
+              height: 240,
+              width: double.infinity,
+              child: ChooseHote(hotels: hotels)),
+          // const SizedBox(
+          //   height: 20,
+          // ),
+
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                'Recommended',
+                style: TextStyle(fontFamily: 'Montserrat', fontSize: 18),
+              )
+            ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          TravelListScreen()
         ]),
       ),
     );

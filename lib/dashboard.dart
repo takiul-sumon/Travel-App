@@ -23,17 +23,17 @@ class _ChooseHotelState extends State<ChooseHotel> {
      final List<Map<String, dynamic>> hotels = [
     {
       'name': 'Alley Palace',
-      'rating': '4.1 ★',
+      'rating': '4.1 ',
       'image': 'assets/photos/Group1.png'
     },
     {
       'name': 'Ocean View',
-      'rating': '4.5 ★',
+      'rating': '4.5 ',
       'image': 'assets/photos/image2.jpg'
     },
     {
       'name': 'Mountain Escape',
-      'rating': '4.8 ★',
+      'rating': '4.8 ',
       'image': 'assets/photos/image1.jpg'
     },
   ];

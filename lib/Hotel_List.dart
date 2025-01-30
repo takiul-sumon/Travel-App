@@ -14,11 +14,11 @@ class ChooseHote extends StatelessWidget {
         final hotel = hotels[index];
         return Padding(
           padding:
-              const EdgeInsets.fromLTRB(0, 0, 16, 0), // Spacing between cards
+              const EdgeInsets.fromLTRB(0, 0, 16, 0), 
           child: HotelCard(
             name: hotel['name'],
             rating: hotel['rating']
-                .toString(), // Ensure rating is passed as a string
+                .toString(), 
             image: hotel['image'],
           ),
         );
@@ -58,7 +58,7 @@ class HotelCard extends StatelessWidget {
             left: 16,
             // right: 16,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,9 +113,15 @@ class HotelCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                IconButton(
+                
+              ],
+            ),
+          ),
+          Positioned(
+            right: 10,bottom: 15,
+            child: IconButton(
                   onPressed: () {},
-                  padding: const EdgeInsets.all(8),
+                  // padding: const EdgeInsets.all(8),
                   style: ButtonStyle(
                     shape: MaterialStateProperty.all<OutlinedBorder>(
                       const CircleBorder(),
@@ -129,10 +135,7 @@ class HotelCard extends StatelessWidget {
                     color: Colors.red,
                     size: 20,
                   ),
-                ),
-              ],
-            ),
-          ),
+                ),)
         ],
       ),
     );

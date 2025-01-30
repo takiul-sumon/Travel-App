@@ -27,7 +27,7 @@ class TravelListScreen extends StatelessWidget {
       height: 180, // Increased height slightly to fit text
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        // padding: const EdgeInsets.symmetric(horizontal: 16),
         itemCount: travelDeals.length,
         itemBuilder: (context, index) {
           return Padding(
@@ -60,7 +60,7 @@ class TravelCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisSize: MainAxisSize.min, // Prevent overflow
+      // mainAxisSize: MainAxisSize.min, // Prevent overflow
       crossAxisAlignment: CrossAxisAlignment.start, // Align text properly
       children: [
         Container(

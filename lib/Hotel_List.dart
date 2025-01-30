@@ -13,10 +13,12 @@ class ChooseHote extends StatelessWidget {
       itemBuilder: (context, index) {
         final hotel = hotels[index];
         return Padding(
-          padding: const EdgeInsets.only(right: 16), // Spacing between cards
+          padding:
+              const EdgeInsets.fromLTRB(0, 0, 16, 0), // Spacing between cards
           child: HotelCard(
             name: hotel['name'],
-            rating: hotel['rating'].toString(), // Ensure rating is passed as a string
+            rating: hotel['rating']
+                .toString(), // Ensure rating is passed as a string
             image: hotel['image'],
           ),
         );
@@ -92,7 +94,7 @@ class HotelCard extends StatelessWidget {
                       ),
                       child: Row(
                         children: [
-                           const Icon(
+                          const Icon(
                             Icons.star, // Star icon
                             color: Colors.amber, // Golden color for star
                             size: 14,
@@ -105,8 +107,7 @@ class HotelCard extends StatelessWidget {
                               fontSize: 12,
                             ),
                           ),
-                           // Spacing between text and star
-                         
+                          // Spacing between text and star
                         ],
                       ),
                     ),

@@ -59,7 +59,7 @@ class Splash_Screan extends StatelessWidget {
                     height: 52,width: MediaQuery.of(context).size.width*.9,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ChooseHotel()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const ChooseHotel()));
                       },
                       child: Text(
                         'Explore',

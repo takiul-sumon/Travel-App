@@ -40,23 +40,7 @@ class _ChooseHotelState extends State<ChooseHotel> {
     ];
 
 
-    final List<Map<String, String>> travelDeals = const [
-    {
-      'image': 'assets/photos/image1.jpg',
-      'title': 'Explore Aspen',
-      'deal': 'Hot Deal',
-    },
-    {
-      'image': 'assets/photos/image2.jpg',
-      'title': 'Swiss Adventure',
-      'deal': 'Limited Offer',
-    },
-    {
-      'image': 'assets/photos/image3.jpg',
-      'title': 'Paris Getaway',
-      'deal': 'Exclusive',
-    },
-  ];
+
 
     return Scaffold(
       backgroundColor: Colors.white,

@@ -112,15 +112,15 @@ class HotelDetails extends StatelessWidget {
             ),
             const Row(
               children: [
-                const Icon(
+                 Icon(
                   Icons.star, // Star icon
                   color: Colors.amber, // Golden color for star
                   size: 14,
                 ),
-                const SizedBox(width: 4),
+                 SizedBox(width: 4),
                 Text(
                   '4.5 (365 Reviews)', // Display the rating
-                  style: const TextStyle(
+                  style:  TextStyle(
                     color: Colors.black, // White color for text
                     fontSize: 12,
                   ),
@@ -163,7 +163,7 @@ class HotelDetails extends StatelessWidget {
             const Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const Text(
+                 Text(
                   'Facilities',
                   style: TextStyle(fontSize: 18, fontFamily: 'Montserrat'),
                 ),
@@ -207,86 +207,93 @@ class HotelDetails extends StatelessWidget {
                   );
                 },
               ),
-            ),SizedBox(height: 10,),
-            Row( mainAxisAlignment: MainAxisAlignment.start,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-              // padding: const EdgeInsets.symmetric(horizontal: 16),
-              height: 56,
-              width: 355,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  // Price Section
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  // padding: const EdgeInsets.symmetric(horizontal: 16),
+                  height: 56,
+                  width: 355,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        'Price',
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.black,
-                          fontWeight: FontWeight.w500,
-                        ),
+                      // Price Section
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            'Price',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Text(
+                            '\$199',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green.shade400,
+                            ),
+                          ),
+                        ],
                       ),
-                      Text(
-                        '\$199',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.green.shade400,
+                      const SizedBox(
+                        width: 55,
+                      ),
+
+                      // "Book Now" Button
+                      Container(
+                        height: 56,
+                        width: 200,
+                        decoration: BoxDecoration(
+                          color: const Color(0xff176FF2),
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.blue.shade100,
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                              offset: const Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                        child: TextButton(
+                          onPressed: () {},
+                          style: TextButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                          ),
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Book Now',
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(width: 8),
+                              Icon(Icons.arrow_right_alt,
+                                  color: Colors.white, size: 24),
+                            ],
+                          ),
                         ),
                       ),
                     ],
-                  ),SizedBox(width: 55,),
-
-                  // "Book Now" Button
-                  Container(
-                    height: 56,
-                    width: 200,
-                    decoration: BoxDecoration(
-                      color: const Color(0xff176FF2),
-                      borderRadius: BorderRadius.circular(16),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.blue.shade100,
-                          blurRadius: 10,
-                          spreadRadius: 2,
-                          offset: const Offset(0, 4),
-                        ),
-                      ],
-                    ),
-                    child: TextButton(
-                      onPressed: () {},
-                      style: TextButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text(
-                            'Book Now',
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(width: 8),
-                          Icon(Icons.arrow_right_alt,
-                              color: Colors.white, size: 24),
-                        ],
-                      ),
-                    ),
                   ),
-                ],
-              ),
-            )
+                )
               ],
             )
           ],

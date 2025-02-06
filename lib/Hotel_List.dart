@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:travel_app/Hotel_Details.dart';
 
 class ChooseHote extends StatelessWidget {
   final List<Map<String, dynamic>> hotels;
@@ -13,14 +14,18 @@ class ChooseHote extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
         final hotel = hotels[index];
-        return Padding(
-          padding:
-              const EdgeInsets.fromLTRB(0, 0, 16, 0), 
-          child: HotelCard(
-            name: hotel['name'],
-            rating: hotel['rating']
-                .toString(), 
-            image: hotel['image'],
+        return GestureDetector(
+          onTap: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => HotelDetails()));
+          },
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
+            child: HotelCard(
+              name: hotel['name'],
+              rating: hotel['rating'].toString(),
+              image: hotel['image'],
+            ),
           ),
         );
       },
@@ -102,9 +107,9 @@ class HotelCard extends StatelessWidget {
                           ),
                           const SizedBox(width: 4),
                           Text(
-                            rating, 
+                            rating,
                             style: const TextStyle(
-                              color: Colors.white, 
+                              color: Colors.white,
                               fontSize: 12,
                             ),
                           ),
@@ -113,29 +118,30 @@ class HotelCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                
               ],
             ),
           ),
           Positioned(
-            right: 10,bottom: 15,
+            right: 10,
+            bottom: 15,
             child: IconButton(
-                  onPressed: () {},
-                  // padding: const EdgeInsets.all(8),
-                  style: ButtonStyle(
-                    shape: MaterialStateProperty.all<OutlinedBorder>(
-                      const CircleBorder(),
-                    ),
-                    backgroundColor: MaterialStateProperty.all<Color>(
-                      Colors.white,
-                    ),
-                  ),
-                  icon: const Icon(
-                    Icons.favorite,
-                    color: Colors.red,
-                    size: 20,
-                  ),
-                ),)
+              onPressed: () {},
+              // padding: const EdgeInsets.all(8),
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all<OutlinedBorder>(
+                  const CircleBorder(),
+                ),
+                backgroundColor: MaterialStateProperty.all<Color>(
+                  Colors.white,
+                ),
+              ),
+              icon: const Icon(
+                Icons.favorite,
+                color: Colors.red,
+                size: 20,
+              ),
+            ),
+          )
         ],
       ),
     );

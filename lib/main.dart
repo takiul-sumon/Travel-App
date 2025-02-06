@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:travel_app/dashboard.dart';
+import 'package:travel_app/Splash_Screan/Splash_Screan.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,13 +9,12 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (context,orientation,devicetype) => MaterialApp(
+    return Sizer(builder: (context,orientation,devicetype) =>const MaterialApp(
       debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
-        home: ChooseHotel(),
+        home: Splash_Screan(),
       ),
     );
   }

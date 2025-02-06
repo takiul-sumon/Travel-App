@@ -32,7 +32,7 @@ class _ChooseHotelState extends State<ChooseHotel> {
       {
         'name': 'Ocean View',
         'rating': '4.5 ',
-        'image': 'assets/photos/image2.jpg'
+        'image': 'assets/photos/image7.png'
       },
       {
         'name': 'Mountain Escape',

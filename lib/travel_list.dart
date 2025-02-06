@@ -5,17 +5,17 @@ class TravelListScreen extends StatelessWidget {
 
   final List<Map<String, String>> travelDeals = const [
     {
-      'image': 'assets/photos/image1.jpg',
+      'image': 'assets/photos/image8.png',
       'title': 'Explore Aspen',
       'deal': 'Hot Deal',
     },
     {
-      'image': 'assets/photos/image2.jpg',
+      'image': 'assets/photos/image9.png',
       'title': 'Swiss Adventure',
       'deal': 'Limited Offer',
     },
     {
-      'image': 'assets/photos/image3.jpg',
+      'image': 'assets/photos/image5.jpg',
       'title': 'Paris Getaway',
       'deal': 'Exclusive',
     },

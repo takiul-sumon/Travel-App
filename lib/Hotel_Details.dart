@@ -39,7 +39,7 @@ class HotelDetails extends StatelessWidget {
                         height: 42.h,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('assets/photos/image2.jpg'),
+                            image: AssetImage('assets/photos/image7.png'),
                             fit: BoxFit.cover,
                           ),
                           borderRadius:

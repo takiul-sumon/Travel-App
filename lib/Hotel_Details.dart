@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:travel_app/dashboard.dart';
 
 class HotelDetails extends StatelessWidget {
   HotelDetails({super.key});
@@ -59,7 +60,9 @@ class HotelDetails extends StatelessWidget {
                               shape: BoxShape.rectangle,
                               borderRadius: BorderRadius.circular(12)),
                           child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const ChooseHotel()));
+                            },
                             icon: const Icon(Icons.arrow_back_ios_rounded),
                           ),
                         )),
@@ -112,15 +115,15 @@ class HotelDetails extends StatelessWidget {
             ),
             const Row(
               children: [
-                 Icon(
+                Icon(
                   Icons.star, // Star icon
                   color: Colors.amber, // Golden color for star
                   size: 14,
                 ),
-                 SizedBox(width: 4),
+                SizedBox(width: 4),
                 Text(
                   '4.5 (365 Reviews)', // Display the rating
-                  style:  TextStyle(
+                  style: TextStyle(
                     color: Colors.black, // White color for text
                     fontSize: 12,
                   ),
@@ -163,7 +166,7 @@ class HotelDetails extends StatelessWidget {
             const Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                 Text(
+                Text(
                   'Facilities',
                   style: TextStyle(fontSize: 18, fontFamily: 'Montserrat'),
                 ),

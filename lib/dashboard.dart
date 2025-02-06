@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:travel_app/Hotel_List.dart';
 import 'package:travel_app/bottom.dart';
 import 'package:travel_app/travel_list.dart';
+import 'package:sizer/sizer.dart';
+
 
 class ChooseHotel extends StatefulWidget {
   const ChooseHotel({super.key});
@@ -38,10 +40,8 @@ class _ChooseHotelState extends State<ChooseHotel> {
         'image': 'assets/photos/image1.jpg'
       },
     ];
-
-
-
-
+    print(MediaQuery.of(context).size.height);
+    print(MediaQuery.of(context).size.width);
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
@@ -96,7 +96,7 @@ class _ChooseHotelState extends State<ChooseHotel> {
             ),
           ),
           const SizedBox(
-            height: 32,
+            height: 0,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -142,8 +142,16 @@ class _ChooseHotelState extends State<ChooseHotel> {
           const SizedBox(
             height: 10,
           ),
-          TravelListScreen()
+          const TravelListScreen()
         ]),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home")
+        ],
       ),
     );
   }

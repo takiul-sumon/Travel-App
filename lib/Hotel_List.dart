@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class ChooseHote extends StatelessWidget {
   final List<Map<String, dynamic>> hotels;
@@ -42,7 +43,7 @@ class HotelCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 240,
+      height: 29.5.h,
       width: 188,
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -101,13 +102,12 @@ class HotelCard extends StatelessWidget {
                           ),
                           const SizedBox(width: 4),
                           Text(
-                            rating, // Display the rating
+                            rating, 
                             style: const TextStyle(
-                              color: Colors.white, // White color for text
+                              color: Colors.white, 
                               fontSize: 12,
                             ),
                           ),
-                          // Spacing between text and star
                         ],
                       ),
                     ),

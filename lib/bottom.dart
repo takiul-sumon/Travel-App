@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class BottomPart extends StatelessWidget {
   const BottomPart({super.key});
@@ -9,17 +10,17 @@ class BottomPart extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Column(
+         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Explore',
-              style: TextStyle(fontSize: 14, fontFamily: 'Montserrat'),
+              style: TextStyle(fontSize: 1.72.h, fontFamily: 'Montserrat'),
             ),
             Text(
               'Aspen',
               style: TextStyle(
-                  fontSize: 32,
+                  fontSize: 3.94.h,
                   fontFamily: 'Montserrat-Regular',
                   fontWeight: FontWeight.bold),
             ),
@@ -28,8 +29,8 @@ class BottomPart extends StatelessWidget {
         Row(
           children: [
             Container(
-              height: 16,
-              width: 16,
+              height: 1.98.h,
+              width: 4.27.w,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/icons/icon1.png'),
@@ -37,17 +38,17 @@ class BottomPart extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
-              width: 6,
+             SizedBox(
+              width: .07.w,
             ),
             const Text('Aspen, Usa',
                 style: TextStyle(fontSize: 12, fontFamily: 'circularxx')),
-            const SizedBox(
-              width: 6,
+             SizedBox(
+              width: .07.w,
             ),
             Container(
-              height: 16,
-              width: 16,
+              height: 1.98.h,
+              width: 4.27.w,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/icons/icon2.png'),

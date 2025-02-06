@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import 'package:travel_app/Hotel_List.dart';
 import 'package:travel_app/bottom.dart';
 import 'package:travel_app/travel_list.dart';
-import 'package:sizer/sizer.dart';
-
 
 class ChooseHotel extends StatefulWidget {
   const ChooseHotel({super.key});
@@ -47,8 +46,7 @@ class _ChooseHotelState extends State<ChooseHotel> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 44),
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-          BottomPart(), const SizedBox(height: 20),
-          // Search Bar
+          const BottomPart(), SizedBox(height: 2.h),
           TextFormField(
             decoration: InputDecoration(
               hintText: 'Find things to do',
@@ -95,8 +93,8 @@ class _ChooseHotelState extends State<ChooseHotel> {
                   ).toList()),
             ),
           ),
-          const SizedBox(
-            height: 0,
+          SizedBox(
+            height: 1.24.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -108,10 +106,9 @@ class _ChooseHotelState extends State<ChooseHotel> {
                   fontFamily: 'Montserrat',
                 ),
               ),
-              const Spacer(), // Adjusts spacing dynamically
+              const Spacer(), 
               TextButton(
                 onPressed: () {},
-                style: const ButtonStyle(),
                 child: const Text(
                   'See All',
                   style: TextStyle(
@@ -122,37 +119,29 @@ class _ChooseHotelState extends State<ChooseHotel> {
               ),
             ],
           ),
-          Container(
-              height: 240,
+          SizedBox(
+              height: 29.5.h,
               width: double.infinity,
               child: ChooseHote(hotels: hotels)),
-          // const SizedBox(
-          //   height: 20,
-          // ),
-
-          const Row(
+              SizedBox(height: 2.46.h,),
+          
+           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
                 'Recommended',
-                style: TextStyle(fontFamily: 'Montserrat', fontSize: 18),
+                style: TextStyle(fontFamily: 'Montserrat', fontSize: 2.21.h),
               )
             ],
           ),
           const SizedBox(
             height: 10,
           ),
-          const TravelListScreen()
+           SizedBox(height: 21.4.h,width: double.infinity,
+            child: TravelListScreen())
         ]),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home")
-        ],
-      ),
+     
     );
   }
 }

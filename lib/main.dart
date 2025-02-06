@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (p0, p1, p2) => MaterialApp(
+    return Sizer(builder: (context,orientation,devicetype) => MaterialApp(
+      debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         home: ChooseHotel(),
       ),

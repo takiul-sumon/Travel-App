@@ -24,7 +24,7 @@ class TravelListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 180, // Increased height slightly to fit text
+      height: 174, // Increased height slightly to fit text
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         // padding: const EdgeInsets.symmetric(horizontal: 16),
